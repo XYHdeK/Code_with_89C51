@@ -1,0 +1,32 @@
+
+	
+
+#include<reg52.h> //头文件
+/***********宏定义*******************/
+#define uint unsigned int教程
+#define uchar unsigned char教程
+/*********数组定义并赋值************/
+uchar LED[]={
+0XFE,0XFD,0XFB,0XF7,
+0XEF,0XDF,0XBF,0X7F
+};
+/**********延时子程序***************/
+void delayms(uint xms)
+{
+  uint i,j;
+  for(i=xms;i>0;i--)
+    for(j=124;j>0;j--);
+}
+/*************主程序*************/
+void main()
+{
+   uchar n;
+   while(1)
+   {
+     for(n=0;n<8;n++)
+  {
+     P0=LED[n];    //将数据传给P0口
+  delayms(500); //延时500MS
+  }
+   }
+}

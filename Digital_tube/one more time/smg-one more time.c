@@ -1,0 +1,18 @@
+#include<reg52.h>
+void main()
+{
+	P1=0x7f;
+	P0=0xe2;
+	P1=1;
+	P1=0xbf;
+	P0=0x02;
+	P1=1;
+	P1=0xdf;
+	P0=0x82;
+	P1=1;
+	P1=0xef;
+	P0=0x60;
+	P1=1;
+
+	while(1);
+}

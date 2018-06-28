@@ -1,0 +1,6 @@
+"STARTUP.obj",
+"copy.obj",
+".\dczcx.obj",
+".\one more time.obj" 
+TO "copy" 
+RAMSIZE(256) 

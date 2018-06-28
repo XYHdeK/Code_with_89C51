@@ -1,0 +1,4 @@
+"STARTUP.obj",
+"jianpan.obj" 
+TO "jianpan" 
+RAMSIZE(256) 

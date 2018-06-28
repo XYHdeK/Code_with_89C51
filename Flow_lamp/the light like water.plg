@@ -1,0 +1,31 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Project:</h2>
+F:\学习开始\流水灯\the light like water.uvproj
+Project File Date:  10/09/2015
+
+<h2>Output:</h2>
+Build target 'Target 1'
+compiling the light like water.c...
+THE LIGHT LIKE WATER.C(8): error C158: '_time': function contains unnamed parameter
+THE LIGHT LIKE WATER.C(9): error C132: 'main': not in formal parameter list
+THE LIGHT LIKE WATER.C(9): error C141: syntax error near '{'
+THE LIGHT LIKE WATER.C(10): error C136: 'bian': 'void' on variable
+THE LIGHT LIKE WATER.C(10): error C244: 'bian': can't initialize, bad type or class
+THE LIGHT LIKE WATER.C(11): error C136: 'bian': 'void' on variable
+THE LIGHT LIKE WATER.C(11): error C132: 'bian': not in formal parameter list
+THE LIGHT LIKE WATER.C(11): error C141: syntax error near 'D1'
+THE LIGHT LIKE WATER.C(11): error C136: 'D1': 'void' on variable
+THE LIGHT LIKE WATER.C(11): error C244: 'D1': can't initialize, bad type or class
+THE LIGHT LIKE WATER.C(12): error C136: 'D1': 'void' on variable
+THE LIGHT LIKE WATER.C(12): error C132: 'D1': not in formal parameter list
+THE LIGHT LIKE WATER.C(12): error C141: syntax error near 'while'
+THE LIGHT LIKE WATER.C(14): error C244: 'bian': can't initialize, bad type or class
+THE LIGHT LIKE WATER.C(14): error C132: 'bian': not in formal parameter list
+THE LIGHT LIKE WATER.C(15): error C132: 'time': not in formal parameter list
+THE LIGHT LIKE WATER.C(16): error C244: 'D1': can't initialize, bad type or class
+THE LIGHT LIKE WATER.C(16): error C132: 'D1': not in formal parameter list
+THE LIGHT LIKE WATER.C(17): error C141: syntax error near '}'
+Target not created

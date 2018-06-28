@@ -1,0 +1,4 @@
+"STARTUP.obj",
+"my miaobiao.obj" 
+TO "my miaobiao" 
+RAMSIZE(256) 

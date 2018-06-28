@@ -1,0 +1,24 @@
+C51 COMPILER V9.00   DCZCX                                                                 10/09/2015 22:49:50 PAGE 1   
+
+
+C51 COMPILER V9.00, COMPILATION OF MODULE DCZCX
+OBJECT MODULE PLACED IN .\dczcx.obj
+COMPILER INVOKED BY: F:\软件\keil\C51\BIN\C51.EXE ..\..\带参数的子程序\dczcx.c BROWSE DEBUG OBJECTEXTEND PRINT(.\dczcx.l
+                    -st) OBJECT(.\dczcx.obj)
+
+line level    source
+
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     54    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

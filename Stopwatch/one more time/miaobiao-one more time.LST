@@ -1,0 +1,108 @@
+C51 COMPILER V9.00   MIAOBIAO_ONE_MORE_TIME                                                10/13/2015 20:48:06 PAGE 1   
+
+
+C51 COMPILER V9.00, COMPILATION OF MODULE MIAOBIAO_ONE_MORE_TIME
+OBJECT MODULE PLACED IN miaobiao-one more time.OBJ
+COMPILER INVOKED BY: F:\»Ìº˛\keil\C51\BIN\C51.EXE miaobiao-one more time.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include<reg52.h>
+   2          //#include<intrins.h>
+   3          #define uint unsigned int
+   4          #define uchar unsigned char
+   5          uchar ge,shi,bai,qian;
+   6          uint aa,temp;
+   7          uchar code table[] = {
+   8             0xc0,0xf9,0xa4,0xb0,
+   9             0x99,0x92,0x82,0xf8, 
+  10             0x80,0x90,0x88,0x83, 
+  11             0xc6,0xa1,0x86,0x8e};
+  12          
+  13          void time(uint dog)
+  14          {
+  15   1         uint cat,pig;
+  16   1            for(cat = 110;cat > 0;cat--)
+  17   1                   for(pig = dog;pig > 0;pig--);   
+  18   1      }
+  19          
+  20          void time0() interrupt 1
+  21          {
+  22   1         TH0 = (65535-50000)/256;        //…∂“‚Àº£ø
+  23   1         TL0 = (65536-50000)%256;
+  24   1         aa++;   
+  25   1      }
+  26          
+  27          void display(qian,bai,shi,ge)
+  28          {
+  29   1         qian = temp/1000;
+  30   1         bai = temp%1000/100;
+  31   1         shi = temp%100/10;
+  32   1         ge = temp%10;   
+  33   1         
+  34   1         P1=0xfe;
+  35   1         P0=table[qian];
+  36   1         time(1);
+  37   1         
+  38   1         P1=0xfd;
+  39   1         P0=table[bai];
+  40   1         time(1);
+  41   1         
+  42   1         P1=0xfb;
+  43   1         P0=table[shi];
+  44   1         time(1);
+  45   1         
+  46   1         P1=0xf7;
+  47   1         P0=table[ge];
+  48   1         time(1);     
+  49   1      }
+  50          
+  51          void init()
+  52          {
+  53   1         temp=0;
+  54   1         aa = 0;
+  55   1         TMOD = 0X01;
+C51 COMPILER V9.00   MIAOBIAO_ONE_MORE_TIME                                                10/13/2015 20:48:06 PAGE 2   
+
+  56   1         EA = 1;
+  57   1         TR0 = 1;
+  58   1         ET0 = 1;
+  59   1         EX0=1;
+  60   1         TH0 = (65535-50000)/256;
+  61   1         TL0 = (65536-50000)%256;
+  62   1      }
+  63          
+  64          void main()
+  65          {
+  66   1         init();
+  67   1         while(1)
+  68   1         {
+  69   2            if(aa == 5)
+  70   2                 {
+  71   3                   aa = 0;
+  72   3                       temp++;
+  73   3                 }
+  74   2                       if(temp == 10000 )
+  75   2                         {
+  76   3                           temp = 0;
+  77   3                              }
+  78   2                            //temp++;
+  79   2                                       
+  80   2                       display(qian,bai,shi,ge); 
+  81   2         }
+  82   1         
+  83   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    324    ----
+   CONSTANT SIZE    =     16    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =      8       8
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

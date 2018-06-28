@@ -1,0 +1,67 @@
+#include<reg52.h>
+#include<intrins.h>
+#define uint unsigned int
+#define uchar unsigned char
+uchar a,b,c,d,e,f,one,ten,hum,tho;
+uint temp,aa;
+uchar code table[]={ 0xc0,0xf9,0xa4,0xb0, 0x99,0x92,0x82,0xf8,  0x80,0x90,0x88,0x83, 0xc6,0xa1,0x86,0x8e};
+uchar code X[]={0x17,0x1b,0x1d,0x1e};
+void t1(uint);	//	声明延迟函数
+void display(uchar tho,hum,ten,one);//显示函数声明
+void init();//声明初始化函数
+void t1(uint x)	//	延迟函数开始 
+{	int i,j;			//	声明整数变数i,j 
+	for (i=0;i<x;i++)	//	计数x次,延迟x*1.007040ms 
+		for (j=0;j<124;j++);	//	计数124次，延迟1.007040ms 
+}						//	延迟函数结束
+
+void main()
+{
+	
+	init();
+	one=temp%1000%100%10;
+	ten=temp%1000%100/10;
+	hum=temp%1000/100;
+	tho=temp/1000;
+	while(1)
+		{
+			if(aa==4)
+			{	temp++;
+				aa=0;	}
+			if(temp==1111)
+				temp=0;
+			one=temp%10;
+			ten=temp%100/10;
+			hum=temp%1000/100;
+			tho=temp/1000;
+			display(tho,hum,ten,one);
+			aa++;
+			t1(1);
+			
+		
+		}
+}
+
+}
+void display(uchar tho,hum,ten,one)
+{
+	P1=X[3];
+	t1(6);
+	P0=table[one];
+	P1=X[0];
+	t1(6);
+	P0=table[ten];
+	P1=X[1];
+	t1(6);
+	P0=table[hum];
+	P1=X[2];
+	t1(6);
+	P0=table[tho];	
+}
+void init()	//初始化程序
+{
+	
+	temp=0;
+
+
+}

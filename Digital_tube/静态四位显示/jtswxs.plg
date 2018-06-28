@@ -1,0 +1,16 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Project:</h2>
+F:\学习开始\数码管\静态四位显示\jtswxs.uvproj
+Project File Date:  10/10/2015
+
+<h2>Output:</h2>
+Build target 'Target 1'
+assembling STARTUP.A51...
+compiling jtswxs.c...
+linking...
+Program Size: data=10.0 xdata=0 code=86
+creating hex file from "jtswxs"...
+"jtswxs" - 0 Error(s), 0 Warning(s).

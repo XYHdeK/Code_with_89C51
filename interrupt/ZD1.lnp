@@ -1,0 +1,4 @@
+"STARTUP.obj",
+"ZD1.obj" 
+TO "ZD1" 
+RAMSIZE(256) 

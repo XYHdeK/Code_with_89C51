@@ -1,0 +1,297 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        10/22/2015  15:05:33  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+F:\Èí¼þ\KEIL\C51\BIN\BL51.EXE STARTUP.obj, test.obj TO test RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  STARTUP.obj (?C_STARTUP)
+  test.obj (TEST)
+
+
+LINK MAP OF MODULE:  test (?C_STARTUP)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0007H     UNIT         ?DT?TEST
+            IDATA   000FH     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     0008H                  *** GAP ***
+            CODE    000BH     0003H     ABSOLUTE     
+            CODE    000EH     0010H     UNIT         ?CO?TEST
+                    001EH     0005H                  *** GAP ***
+            CODE    0023H     0003H     ABSOLUTE     
+            CODE    0026H     0057H     UNIT         ?PR?DISPLAY?TEST
+            CODE    007DH     0038H     UNIT         ?PR?COM?TEST
+            CODE    00B5H     0037H     UNIT         ?PR?MAIN?TEST
+            CODE    00ECH     002CH     UNIT         ?PR?SAOMIAO?TEST
+            CODE    0118H     002BH     UNIT         ?PR?INIT?TEST
+            CODE    0143H     0026H     UNIT         ?PR?_TIME?TEST
+            CODE    0169H     000CH     UNIT         ?C_C51STARTUP
+            CODE    0175H     0009H     UNIT         ?PR?TIME0?TEST
+
+
+
+OVERLAY MAP OF MODULE:   test (?C_STARTUP)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?TEST
+
+?PR?MAIN?TEST
+  +--> ?PR?INIT?TEST
+  +--> ?PR?SAOMIAO?TEST
+  +--> ?PR?_TIME?TEST
+  +--> ?PR?DISPLAY?TEST
+
+?PR?SAOMIAO?TEST
+  +--> ?PR?_TIME?TEST
+BL51 BANKED LINKER/LOCATER V6.22                                                      10/22/2015  15:05:33  PAGE 2
+
+
+
+?PR?DISPLAY?TEST
+  +--> ?CO?TEST
+  +--> ?PR?_TIME?TEST
+
+*** NEW ROOT ***************************************************
+
+?PR?COM?TEST
+  +--> ?PR?DISPLAY?TEST
+
+
+
+SYMBOL TABLE OF MODULE:  test (?C_STARTUP)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        ?C_STARTUP
+  C:0169H         SEGMENT       ?C_C51STARTUP
+  I:000FH         SEGMENT       ?STACK
+  C:0000H         PUBLIC        ?C_STARTUP
+  D:00E0H         SYMBOL        ACC
+  D:00F0H         SYMBOL        B
+  D:0083H         SYMBOL        DPH
+  D:0082H         SYMBOL        DPL
+  N:0000H         SYMBOL        IBPSTACK
+  N:0100H         SYMBOL        IBPSTACKTOP
+  N:0080H         SYMBOL        IDATALEN
+  C:016CH         SYMBOL        IDATALOOP
+  N:0000H         SYMBOL        PBPSTACK
+  N:0100H         SYMBOL        PBPSTACKTOP
+  N:0000H         SYMBOL        PDATALEN
+  N:0000H         SYMBOL        PDATASTART
+  N:0000H         SYMBOL        PPAGE
+  N:0000H         SYMBOL        PPAGEENABLE
+  D:00A0H         SYMBOL        PPAGE_SFR
+  D:0081H         SYMBOL        SP
+  C:0169H         SYMBOL        STARTUP1
+  N:0000H         SYMBOL        XBPSTACK
+  N:0000H         SYMBOL        XBPSTACKTOP
+  N:0000H         SYMBOL        XDATALEN
+  N:0000H         SYMBOL        XDATASTART
+  C:0000H         LINE#         126
+  C:0169H         LINE#         133
+  C:016BH         LINE#         134
+  C:016CH         LINE#         135
+  C:016DH         LINE#         136
+  C:016FH         LINE#         185
+  C:0172H         LINE#         196
+  -------         ENDMOD        ?C_STARTUP
+
+  -------         MODULE        TEST
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0080H         PUBLIC        P0
+  D:0090H         PUBLIC        P1
+  D:00A0H         PUBLIC        P2
+  D:00B0H         PUBLIC        P3
+BL51 BANKED LINKER/LOCATER V6.22                                                      10/22/2015  15:05:33  PAGE 3
+
+
+  B:00A8H.7       PUBLIC        EA
+  C:000EH         PUBLIC        table
+  D:00A8H         PUBLIC        IE
+  B:00A8H.4       PUBLIC        ES
+  D:00B8H         PUBLIC        IP
+  B:0098H.0       PUBLIC        RI
+  C:00B5H         PUBLIC        main
+  D:0008H         PUBLIC        qian
+  D:0009H         PUBLIC        bai
+  C:0147H         PUBLIC        _time
+  D:0099H         PUBLIC        SBUF
+  D:0098H         PUBLIC        SCON
+  D:0089H         PUBLIC        TMOD
+  D:0088H         PUBLIC        TCON
+  C:0118H         PUBLIC        init
+  D:000AH         PUBLIC        temp
+  C:007DH         PUBLIC        com
+  D:000BH         PUBLIC        aa
+  D:000CH         PUBLIC        shi
+  B:00A8H.1       PUBLIC        ET0
+  D:000DH         PUBLIC        ge
+  D:008CH         PUBLIC        TH0
+  B:00A8H.0       PUBLIC        EX0
+  D:008DH         PUBLIC        TH1
+  B:0098H.7       PUBLIC        SM0
+  D:008AH         PUBLIC        TL0
+  D:000EH         PUBLIC        num
+  B:0098H.6       PUBLIC        SM1
+  D:008BH         PUBLIC        TL1
+  B:0088H.4       PUBLIC        TR0
+  B:0088H.6       PUBLIC        TR1
+  C:0175H         PUBLIC        time0
+  B:0098H.4       PUBLIC        REN
+  D:00C8H         PUBLIC        T2CON
+  C:00ECH         PUBLIC        saomiao
+  C:0026H         PUBLIC        display
+  D:00D0H         PUBLIC        PSW
+  B:00B0H.7       PUBLIC        key1
+  B:00B0H.6       PUBLIC        key2
+  B:00B0H.5       PUBLIC        key3
+  C:0143H         SYMBOL        L?0039
+  -------         PROC          L?0038
+  -------         ENDPROC       L?0038
+  C:0143H         SYMBOL        L?0039
+  -------         PROC          _TIME
+  D:0006H         SYMBOL        pig
+  -------         DO            
+  D:0002H         SYMBOL        boy
+  D:0004H         SYMBOL        girl
+  -------         ENDDO         
+  C:0147H         LINE#         14
+  C:0147H         LINE#         15
+  C:0147H         LINE#         17
+  C:014BH         LINE#         18
+  C:0168H         LINE#         19
+  -------         ENDPROC       _TIME
+  -------         PROC          DISPLAY
+BL51 BANKED LINKER/LOCATER V6.22                                                      10/22/2015  15:05:33  PAGE 4
+
+
+  C:0026H         LINE#         21
+  C:0026H         LINE#         22
+  C:0026H         LINE#         23
+  C:002EH         LINE#         24
+  C:003CH         LINE#         25
+  C:0045H         LINE#         27
+  C:0048H         LINE#         28
+  C:004FH         LINE#         29
+  C:0056H         LINE#         31
+  C:0059H         LINE#         32
+  C:005EH         LINE#         33
+  C:0063H         LINE#         35
+  C:0066H         LINE#         36
+  C:006BH         LINE#         37
+  C:0070H         LINE#         39
+  C:0073H         LINE#         40
+  C:0078H         LINE#         41
+  -------         ENDPROC       DISPLAY
+  -------         PROC          TIME0
+  C:0175H         LINE#         44
+  C:0175H         LINE#         46
+  C:0178H         LINE#         47
+  C:017BH         LINE#         48
+  C:017DH         LINE#         49
+  -------         ENDPROC       TIME0
+  -------         PROC          COM
+  C:007DH         LINE#         51
+  C:0096H         LINE#         53
+  C:0098H         LINE#         54
+  C:009BH         LINE#         55
+  C:009EH         LINE#         56
+  -------         ENDPROC       COM
+  -------         PROC          INIT
+  C:0118H         LINE#         58
+  C:0118H         LINE#         59
+  C:0118H         LINE#         60
+  C:011BH         LINE#         61
+  C:011EH         LINE#         62
+  C:0121H         LINE#         63
+  C:0124H         LINE#         64
+  C:0126H         LINE#         65
+  C:0129H         LINE#         66
+  C:012CH         LINE#         67
+  C:012EH         LINE#         68
+  C:0130H         LINE#         69
+  C:0132H         LINE#         70
+  C:0134H         LINE#         71
+  C:0137H         LINE#         72
+  C:013AH         LINE#         73
+  C:013CH         LINE#         74
+  C:013EH         LINE#         75
+  C:0140H         LINE#         76
+  C:0142H         LINE#         77
+  -------         ENDPROC       INIT
+  -------         PROC          SAOMIAO
+  C:00ECH         LINE#         79
+  C:00ECH         LINE#         80
+BL51 BANKED LINKER/LOCATER V6.22                                                      10/22/2015  15:05:33  PAGE 5
+
+
+  C:00ECH         LINE#         81
+  C:00EFH         LINE#         82
+  C:00EFH         LINE#         83
+  C:00F1H         LINE#         84
+  C:00F4H         LINE#         85
+  C:00F7H         LINE#         86
+  C:00FAH         LINE#         87
+  C:00FAH         LINE#         90
+  C:00FDH         LINE#         91
+  C:00FDH         LINE#         92
+  C:00FFH         LINE#         93
+  C:0102H         LINE#         94
+  C:0105H         LINE#         95
+  C:0108H         LINE#         96
+  C:0108H         LINE#         99
+  C:010BH         LINE#         100
+  C:010BH         LINE#         101
+  C:010EH         LINE#         102
+  C:0111H         LINE#         103
+  C:0114H         LINE#         104
+  C:0117H         LINE#         105
+  C:0117H         LINE#         108
+  -------         ENDPROC       SAOMIAO
+  -------         PROC          MAIN
+  C:00B5H         LINE#         110
+  C:00B5H         LINE#         111
+  C:00B5H         LINE#         112
+  C:00B8H         LINE#         113
+  C:00B8H         LINE#         114
+  C:00B8H         LINE#         115
+  C:00BBH         LINE#         116
+  C:00C0H         LINE#         117
+  C:00C0H         LINE#         118
+  C:00C3H         LINE#         119
+  C:00C3H         LINE#         120
+  C:00C3H         LINE#         121
+  C:00D0H         LINE#         122
+  C:00D7H         LINE#         123
+  C:00DAH         LINE#         125
+  C:00DAH         LINE#         127
+  C:00DAH         LINE#         128
+  C:00DDH         LINE#         130
+  C:00E2H         LINE#         131
+  C:00E2H         LINE#         132
+  C:00E5H         LINE#         133
+  C:00E7H         LINE#         134
+  C:00E7H         LINE#         135
+  C:00EAH         LINE#         136
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        TEST
+
+Program Size: data=16.0 xdata=0 code=369
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

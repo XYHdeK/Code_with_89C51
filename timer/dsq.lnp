@@ -1,0 +1,4 @@
+"STARTUP.obj",
+"dsq.obj" 
+TO "dsq" 
+RAMSIZE(256) 

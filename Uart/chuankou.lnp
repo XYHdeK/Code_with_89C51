@@ -1,0 +1,4 @@
+"STARTUP.obj",
+"chuankou.obj" 
+TO "chuankou" 
+RAMSIZE(256) 

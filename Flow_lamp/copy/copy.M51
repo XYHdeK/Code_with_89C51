@@ -1,0 +1,259 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        10/09/2015  22:49:50  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+F:\Èí¼þ\KEIL\C51\BIN\BL51.EXE STARTUP.obj, copy.obj, .\dczcx.obj, .\one more time.obj TO copy RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  STARTUP.obj (?C_STARTUP)
+  copy.obj (COPY)
+  .\dczcx.obj (DCZCX)
+  .\one more time.obj (ONE_MORE_TIME)
+
+
+LINK MAP OF MODULE:  copy (?C_STARTUP)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0003H     UNIT         ?DT?COPY
+            DATA    000BH     0001H     UNIT         ?DT?ONE_MORE_TIME
+            IDATA   000CH     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     0025H     UNIT         ?PR?MAIN?COPY
+            CODE    0028H     0022H     UNIT         ?PR?_TIME?COPY
+            CODE    004AH     0022H     UNIT         ?PR?_TIME?DCZCX
+            CODE    006CH     0022H     UNIT         ?PR?_TIME?ONE_MORE_TIME
+            CODE    008EH     001FH     UNIT         ?PR?MAIN?ONE_MORE_TIME
+            CODE    00ADH     0014H     UNIT         ?PR?MAIN?DCZCX
+            CODE    00C1H     000CH     UNIT         ?C_C51STARTUP
+
+
+
+OVERLAY MAP OF MODULE:   copy (?C_STARTUP)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?COPY
+
+?PR?MAIN?COPY
+  +--> ?PR?_TIME?COPY
+
+
+
+IGNORED SYMBOLS:
+   MAIN
+   TEMP
+   _TIME
+
+
+BL51 BANKED LINKER/LOCATER V6.22                                                      10/09/2015  22:49:50  PAGE 2
+
+
+
+SYMBOL TABLE OF MODULE:  copy (?C_STARTUP)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        ?C_STARTUP
+  C:00C1H         SEGMENT       ?C_C51STARTUP
+  I:000CH         SEGMENT       ?STACK
+  C:0000H         PUBLIC        ?C_STARTUP
+  D:00E0H         SYMBOL        ACC
+  D:00F0H         SYMBOL        B
+  D:0083H         SYMBOL        DPH
+  D:0082H         SYMBOL        DPL
+  N:0000H         SYMBOL        IBPSTACK
+  N:0100H         SYMBOL        IBPSTACKTOP
+  N:0080H         SYMBOL        IDATALEN
+  C:00C4H         SYMBOL        IDATALOOP
+  N:0000H         SYMBOL        PBPSTACK
+  N:0100H         SYMBOL        PBPSTACKTOP
+  N:0000H         SYMBOL        PDATALEN
+  N:0000H         SYMBOL        PDATASTART
+  N:0000H         SYMBOL        PPAGE
+  N:0000H         SYMBOL        PPAGEENABLE
+  D:00A0H         SYMBOL        PPAGE_SFR
+  D:0081H         SYMBOL        SP
+  C:00C1H         SYMBOL        STARTUP1
+  N:0000H         SYMBOL        XBPSTACK
+  N:0000H         SYMBOL        XBPSTACKTOP
+  N:0000H         SYMBOL        XDATALEN
+  N:0000H         SYMBOL        XDATASTART
+  C:0000H         LINE#         126
+  C:00C1H         LINE#         133
+  C:00C3H         LINE#         134
+  C:00C4H         LINE#         135
+  C:00C5H         LINE#         136
+  C:00C7H         LINE#         185
+  C:00CAH         LINE#         196
+  -------         ENDMOD        ?C_STARTUP
+
+  -------         MODULE        COPY
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  D:00B0H         PUBLIC        P3
+  D:00A8H         PUBLIC        IE
+  D:00B8H         PUBLIC        IP
+  C:0003H         PUBLIC        main
+  C:0028H         PUBLIC        _time
+  D:0098H         PUBLIC        SCON
+  D:0088H         PUBLIC        TCON
+  D:0008H         PUBLIC        temp
+  D:00C8H         PUBLIC        T2CON
+  D:0009H         PUBLIC        D1
+  D:00D0H         PUBLIC        PSW
+  -------         PROC          MAIN
+  C:0003H         LINE#         8
+  C:0003H         LINE#         9
+BL51 BANKED LINKER/LOCATER V6.22                                                      10/09/2015  22:49:50  PAGE 3
+
+
+  C:0003H         LINE#         10
+  C:0006H         LINE#         11
+  C:000CH         LINE#         12
+  C:000CH         LINE#         13
+  C:000CH         LINE#         14
+  C:0019H         LINE#         15
+  C:0020H         LINE#         16
+  C:0026H         LINE#         17
+  -------         ENDPROC       MAIN
+  -------         PROC          _TIME
+  D:0006H         SYMBOL        c
+  -------         DO            
+  D:0004H         SYMBOL        a
+  D:0002H         SYMBOL        b
+  -------         ENDDO         
+  C:0028H         LINE#         20
+  C:0028H         LINE#         21
+  C:0028H         LINE#         23
+  C:002CH         LINE#         24
+  C:0049H         LINE#         25
+  -------         ENDPROC       _TIME
+  -------         ENDMOD        COPY
+
+  -------         MODULE        DCZCX
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  D:00A0H         PUBLIC        P2
+  D:00B0H         PUBLIC        P3
+  D:00A8H         PUBLIC        IE
+  D:00B8H         PUBLIC        IP
+  C:00ADH         PUBLIC        main
+  C:004AH         PUBLIC        _time
+  D:0098H         PUBLIC        SCON
+  D:0088H         PUBLIC        TCON
+  D:00C8H         PUBLIC        T2CON
+  B:00A0H.0       PUBLIC        D1
+  D:00D0H         PUBLIC        PSW
+  -------         PROC          MAIN
+  C:00ADH         LINE#         6
+  C:00ADH         LINE#         7
+  C:00ADH         LINE#         8
+  C:00ADH         LINE#         9
+  C:00ADH         LINE#         10
+  C:00AFH         LINE#         11
+  C:00B6H         LINE#         12
+  C:00B8H         LINE#         13
+  C:00BFH         LINE#         14
+  -------         ENDPROC       MAIN
+  -------         PROC          _TIME
+  D:0006H         SYMBOL        c
+  -------         DO            
+  D:0004H         SYMBOL        a
+  D:0002H         SYMBOL        b
+  -------         ENDDO         
+  C:004AH         LINE#         17
+  C:004AH         LINE#         18
+  C:004AH         LINE#         20
+BL51 BANKED LINKER/LOCATER V6.22                                                      10/09/2015  22:49:50  PAGE 4
+
+
+  C:004EH         LINE#         21
+  C:006BH         LINE#         22
+  -------         ENDPROC       _TIME
+  -------         ENDMOD        DCZCX
+
+  -------         MODULE        ONE_MORE_TIME
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  D:00B0H         PUBLIC        P3
+  D:00A8H         PUBLIC        IE
+  D:00B8H         PUBLIC        IP
+  C:008EH         PUBLIC        main
+  C:006CH         PUBLIC        _time
+  D:0098H         PUBLIC        SCON
+  D:0088H         PUBLIC        TCON
+  D:000BH         PUBLIC        temp
+  D:00C8H         PUBLIC        T2CON
+  D:00D0H         PUBLIC        PSW
+  -------         PROC          MAIN
+  C:008EH         LINE#         7
+  C:008EH         LINE#         8
+  C:008EH         LINE#         9
+  C:0091H         LINE#         10
+  C:0094H         LINE#         11
+  C:0094H         LINE#         12
+  C:0094H         LINE#         13
+  C:00A1H         LINE#         14
+  C:00A8H         LINE#         15
+  C:00ABH         LINE#         16
+  -------         ENDPROC       MAIN
+  -------         PROC          _TIME
+  D:0006H         SYMBOL        c
+  -------         DO            
+  D:0004H         SYMBOL        a
+  D:0002H         SYMBOL        b
+  -------         ENDDO         
+  C:006CH         LINE#         19
+  C:006CH         LINE#         20
+  C:006CH         LINE#         22
+  C:0070H         LINE#         23
+  C:008DH         LINE#         24
+  -------         ENDPROC       _TIME
+  -------         ENDMOD        ONE_MORE_TIME
+
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  _TIME
+    MODULE:  .\dczcx.obj (DCZCX)
+
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  MAIN
+    MODULE:  .\dczcx.obj (DCZCX)
+
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  TEMP
+    MODULE:  .\one more time.obj (ONE_MORE_TIME)
+
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+BL51 BANKED LINKER/LOCATER V6.22                                                      10/09/2015  22:49:50  PAGE 5
+
+
+    SYMBOL:  _TIME
+    MODULE:  .\one more time.obj (ONE_MORE_TIME)
+
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  MAIN
+    MODULE:  .\one more time.obj (ONE_MORE_TIME)
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?MAIN?DCZCX
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?MAIN?ONE_MORE_TIME
+
+Program Size: data=13.0 xdata=0 code=205
+LINK/LOCATE RUN COMPLETE.  2 WARNING(S),  5 ERROR(S)

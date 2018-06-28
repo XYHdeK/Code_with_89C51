@@ -1,0 +1,55 @@
+C51 COMPILER V9.00   THE_LIGHT_LIKE_WATER                                                  10/09/2015 16:39:57 PAGE 1   
+
+
+C51 COMPILER V9.00, COMPILATION OF MODULE THE_LIGHT_LIKE_WATER
+OBJECT MODULE PLACED IN the light like water.OBJ
+COMPILER INVOKED BY: F:\Èí¼þ\keil\C51\BIN\C51.EXE the light like water.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include<reg52.h>
+   2          #include<intrins.h>
+   3          #define uint unsigned int
+   4          #define uchar unsigned char
+   5          sbit D1=P2^0;
+   6          uchar bian;
+   7          void time(uint)
+   8          void main()
+*** ERROR C158 IN LINE 8 OF THE LIGHT LIKE WATER.C: '_time': function contains unnamed parameter
+   9          {
+*** ERROR C132 IN LINE 9 OF THE LIGHT LIKE WATER.C: 'main': not in formal parameter list
+*** ERROR C141 IN LINE 9 OF THE LIGHT LIKE WATER.C: syntax error near '{'
+  10                  bian=0xfe
+*** ERROR C136 IN LINE 10 OF THE LIGHT LIKE WATER.C: 'bian': 'void' on variable
+*** ERROR C244 IN LINE 10 OF THE LIGHT LIKE WATER.C: 'bian': can't initialize, bad type or class
+  11                  D1=bian
+*** ERROR C136 IN LINE 11 OF THE LIGHT LIKE WATER.C: 'bian': 'void' on variable
+*** ERROR C132 IN LINE 11 OF THE LIGHT LIKE WATER.C: 'bian': not in formal parameter list
+*** ERROR C141 IN LINE 11 OF THE LIGHT LIKE WATER.C: syntax error near 'D1'
+*** ERROR C136 IN LINE 11 OF THE LIGHT LIKE WATER.C: 'D1': 'void' on variable
+*** ERROR C244 IN LINE 11 OF THE LIGHT LIKE WATER.C: 'D1': can't initialize, bad type or class
+  12                  while(1)
+*** ERROR C136 IN LINE 12 OF THE LIGHT LIKE WATER.C: 'D1': 'void' on variable
+*** ERROR C132 IN LINE 12 OF THE LIGHT LIKE WATER.C: 'D1': not in formal parameter list
+*** ERROR C141 IN LINE 12 OF THE LIGHT LIKE WATER.C: syntax error near 'while'
+  13                  {
+  14                          bian=_crol_(bian,1);
+*** ERROR C244 IN LINE 14 OF THE LIGHT LIKE WATER.C: 'bian': can't initialize, bad type or class
+*** ERROR C132 IN LINE 14 OF THE LIGHT LIKE WATER.C: 'bian': not in formal parameter list
+  15                          time();
+*** ERROR C132 IN LINE 15 OF THE LIGHT LIKE WATER.C: 'time': not in formal parameter list
+  16                          D1=bian;        
+*** ERROR C244 IN LINE 16 OF THE LIGHT LIKE WATER.C: 'D1': can't initialize, bad type or class
+*** ERROR C132 IN LINE 16 OF THE LIGHT LIKE WATER.C: 'D1': not in formal parameter list
+  17                  }
+*** ERROR C141 IN LINE 17 OF THE LIGHT LIKE WATER.C: syntax error near '}'
+  18          }
+  19          
+  20          void time()
+  21          {
+  22   1              uint a,b;
+  23   1              for(a=100;a>0;a--)
+  24   1                      for(b=100;b>0;b--);
+  25   1      }
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  19 ERROR(S)

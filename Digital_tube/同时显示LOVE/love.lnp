@@ -1,0 +1,4 @@
+"STARTUP.obj",
+"love.obj" 
+TO "love" 
+RAMSIZE(256) 

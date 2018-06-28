@@ -1,0 +1,23 @@
+C51 COMPILER V9.00   SMG1                                                                  10/10/2015 16:00:46 PAGE 1   
+
+
+C51 COMPILER V9.00, COMPILATION OF MODULE SMG1
+OBJECT MODULE PLACED IN smg1.OBJ
+COMPILER INVOKED BY: F:\Èí¼þ\keil\C51\BIN\C51.EXE smg1.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          sbit wei=P2^7;
+*** ERROR C202 IN LINE 1 OF SMG1.C: 'P2': undefined identifier
+   2          void main()
+   3          {
+   4   1              wei=1;
+*** ERROR C202 IN LINE 4 OF SMG1.C: 'wei': undefined identifier
+   5   1              P0=0x9f;
+*** ERROR C202 IN LINE 5 OF SMG1.C: 'P0': undefined identifier
+   6   1              wei=0;
+*** ERROR C202 IN LINE 6 OF SMG1.C: 'wei': undefined identifier
+   7   1              while(1);
+   8   1      }
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  4 ERROR(S)

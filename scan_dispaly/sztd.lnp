@@ -1,0 +1,4 @@
+"STARTUP.obj",
+"sztd.obj" 
+TO "sztd" 
+RAMSIZE(256) 

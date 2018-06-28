@@ -1,0 +1,53 @@
+C51 COMPILER V9.00   JTSWXS                                                                10/14/2015 21:38:31 PAGE 1   
+
+
+C51 COMPILER V9.00, COMPILATION OF MODULE JTSWXS
+OBJECT MODULE PLACED IN jtswxs.OBJ
+COMPILER INVOKED BY: F:\Èí¼þ\keil\C51\BIN\C51.EXE jtswxs.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include<reg52.h>
+   2          #define uint unsigned int
+   3          #define uchar unsigned char
+   4          uchar num;
+   5          uchar code table[] = {0x47,0x40,0x41,0x06};//L,O,U,E
+   6          void time(uint c);
+   7          
+   8          void main()
+   9          {
+  10   1               num = 0;
+  11   1              P1 = 0xf0;
+  12   1              while(1)
+  13   1              {
+  14   2                         
+  15   2                              P0 = table[num];
+  16   2                              num++;
+  17   2                              time(600);      
+  18   2                              if(num == 4)
+  19   2                              {
+  20   3                                      num = 0;
+  21   3                              }
+  22   2              }
+  23   1      }
+  24          
+  25          void time(uint c)
+  26          {
+  27   1              uint a,b;
+  28   1              for(a = 100;a>0;a--)
+  29   1                      for(b = c;b>0;b--);
+  30   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     67    ----
+   CONSTANT SIZE    =      4    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =      1    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
